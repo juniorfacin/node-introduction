@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Componentes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Meu Teste de HTML</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>Formulário de Teste</h2>
+        <form id="test-form">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Lista de Itens</h2>
+        <ul id="lista">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+        <button onclick="adicionarItem()">Adicionar Item</button>
+    </section>
+
+    <script>
+        function adicionarItem() {
+            const lista = document.getElementById('lista');
+            const novoItem = document.createElement('li');
+            novoItem.textContent = 'Novo Item';
+            lista.appendChild(novoItem);
+        }
+    </script>
+</body>
+
+</html>
